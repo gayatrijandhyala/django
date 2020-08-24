@@ -17,10 +17,13 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include,url
 from meandmine.views import home,about,myhobbies
+from wordcount.views import wchomepage,count
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/',home, name='home'),
     path('about/',about,name='about'),
     path('myhobbies/',myhobbies,name='myhobbies'),
+    path('',wchomepage,name='WChomepage'),
+    path('count/',count,name='count'),
     url('mycontacts.*/',include('mycontacts.urls')),
 ]

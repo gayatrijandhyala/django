@@ -1,0 +1,11 @@
+<a href="/home"> My Best Home</a>
+<h1> Your Word Frequency's are </h1>
+<table>
+
+{% for word,freq in Words.items %}
+<tr>
+	<th>{{word}}</th>
+	<td>{{freq}}</td>
+</tr>
+{% endfor %}
+</table>
